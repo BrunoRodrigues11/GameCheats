@@ -449,7 +449,7 @@ const vehicleCheats = [
     imagems: [
       "../assets/icons/ps/ps_Bolinha.svg",
       "../assets/icons/ps/ps_L1.svg",
-      "../assets/icons/ps/ps_Esqeurda.svg",
+      "../assets/icons/ps/ps_Esquerda.svg",
       "../assets/icons/ps/ps_R1.svg",
       "../assets/icons/ps/ps_L2.svg",
       "../assets/icons/ps/ps_X.svg",
