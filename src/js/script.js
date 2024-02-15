@@ -1,8 +1,11 @@
 import {
-  playerCheats,
-  worldCheats,
-  vehicleCheats,
-} from "../api_cheats/dados.js";
+  playerCheatsPS,
+  worldCheatsPS,
+  vehicleCheatsPS,
+  playerCheatsXBX,
+  worldCheatsXBX,
+  vehicleCheatsXBX,
+} from "../api_cheats/dados_gta5.js";
 
 function createCheatsCard(list_cheats, idCard) {
   let card = document.getElementById(idCard);
@@ -49,6 +52,10 @@ function createCheatsCard(list_cheats, idCard) {
   });
 }
 
-createCheatsCard(playerCheats, "card_player");
-createCheatsCard(worldCheats, "card_world");
-createCheatsCard(vehicleCheats, "card_vehicle");
+createCheatsCard(playerCheatsPS, "card_player_PS");
+createCheatsCard(worldCheatsPS, "card_world_PS");
+createCheatsCard(vehicleCheatsPS, "card_vehicle_PS");
+
+createCheatsCard(playerCheatsXBX, "card_player_XBX");
+createCheatsCard(worldCheatsXBX, "card_world_XBX");
+createCheatsCard(vehicleCheatsXBX, "card_vehicle_XBX");
