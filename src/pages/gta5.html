@@ -171,13 +171,71 @@
 
         <!-- COMPUTADOR CHEATS -->
         <div id="comp_cheats" class="tabcontent">
-          <div class="bg-info">Computador</div>
+          <!-- PLAYER CHEATS CARD-->
+          <div class="row">
+            <div class="col-12">
+              <div class="card mt-3 card__banner">
+                <div class="card-body">
+                  <span class="text-light card__version">
+                    <h5>Player Cheats</h5>
+                  </span>
+                  <img
+                    src="../assets/img/gta5.jpg"
+                    alt="Banner do jogo GTA 5 com o texto player cheats"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12" id="card_player_COMP"></div>
+          </div>
+
+          <!-- WORLD CHEATS CARD -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card mt-3 card__banner">
+                <div class="card-body">
+                  <span class="text-light card__version">
+                    <h5>World Cheats</h5>
+                  </span>
+                  <img
+                    src="../assets/img/gta5.jpg"
+                    alt="Banner do jogo GTA 5 com o texto world cheats"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12" id="card_world_COMP"></div>
+          </div>
+
+          <!-- VEHICLE CHEATS CARD -->
+          <div class="row">
+            <div class="col-12">
+              <div class="card mt-3 card__banner">
+                <div class="card-body">
+                  <span class="text-light card__version">
+                    <h5>Vehicle Cheats</h5>
+                  </span>
+                  <img
+                    src="../assets/img/gta5.jpg"
+                    alt="Banner do jogo GTA 5 com o texto vehicle cheats"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12" id="card_vehicle_COMP"></div>
+          </div>
         </div>
       </div>
     </div>
     <script>
       function openPlataformCheats(evt, plataforma) {
-        var i, tabcontent, tablinks;
+        let i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");
         for (i = 0; i < tabcontent.length; i++) {
           tabcontent[i].style.display = "none";

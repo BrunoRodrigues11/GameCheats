@@ -14,27 +14,43 @@
 - Separar por seções: PLAYER CHEATS, WORLD CHEATS, VEHICLE CHEATS, SPECIAL VEHICLE CHEATS
 - Nas seções VEHICLE CHEATS e SPECIAL VEHICLE CHEATS, incluir o botão de visualizar os detalhes do veiculo em um modal
 
-### CHEATS GTA 5 - Play Station
+## PLAYER CHEATS
 
-#### PLAYER CHEATS
+### Todas as armas
 
-- Todas as armas => TRIÂNGULO, R2, ESQUERDA, L1, X, DIREITA, TRIÂNGULO, BAIXO, QUADRADO, L1, L1, L1
+- TRIÂNGULO, R2, ESQUERDA, L1, X, DIREITA, TRIÂNGULO, BAIXO, QUADRADO, L1, L1, L1
 
-- Vida máxima + armadura => CÍRCULO, L1, TRIÂNGULO, R2, X, QUADRADO, CÍRCULO, DIREITA, QUADRADO, L1, L1, L1
+### Vida máxima + armadura
 
-- Invencibilidade por 5 minutos => DIREITA, A, DIREITA, ESQUERDA, DIREITA, RB, DIREITA, ESQUERDA, A, Y
+- CÍRCULO, L1, TRIÂNGULO, R2, X, QUADRADO, CÍRCULO, DIREITA, QUADRADO, L1, L1, L1
 
-- Diminuir nível de procurado (uma estrela a cada ativação) => R1, R1, CÍRCULO, R2, DIREITA, ESQUERDA, DIREITA, ESQUERDA, DIREITA, ESQUERDA -->
+## Invencibilidade por 5 minutos
 
-- Aumentar nível de procurado (uma estrela a cada ativação) => R1, R1, CÍRCULO, R2, ESQUERDA, DIREITA, ESQUERDA, DIREITA, ESQUERDA, DIREITA
+- DIREITA, A, DIREITA, ESQUERDA, DIREITA, RB, DIREITA, ESQUERDA, A, Y
 
-- Recarga de capacidade especial => X, X, QUADRADO, R1, L1, X, DIREITA, ESQUERDA, X
+## Diminuir nível de procurado (uma estrela a cada ativação)
 
-- Munição explosiva => DIREITA, QUADRADO, X, ESQUERDA, R1, R2, ESQUERDA, DIREITA, DIREITA, L1, L1, L1
+- R1, R1, CÍRCULO, R2, DIREITA, ESQUERDA, DIREITA, ESQUERDA, DIREITA, ESQUERDA
 
-- Munição flamejante => L1, R1, QUADRADO, R1, ESQUERDA, R2, R1, ESQUERDA, QUADRADO, DIREITA, L1, L1
+## Aumentar nível de procurado (uma estrela a cada ativação)
 
-- Ataques corpo a corpo explosivos => DIREITA, ESQUERDA, X, TRIÂNGULO, R1, CÍRCULO, CÍRCULO, CÍRCULO, L2
+- R1, R1, CÍRCULO, R2, ESQUERDA, DIREITA, ESQUERDA, DIREITA, ESQUERDA, DIREITA
+
+## Recarga de capacidade especial
+
+- X, X, QUADRADO, R1, L1, X, DIREITA, ESQUERDA, X
+
+## Munição explosiva
+
+- DIREITA, QUADRADO, X, ESQUERDA, R1, R2, ESQUERDA, DIREITA, DIREITA, L1, L1, L1
+
+## Munição flamejante
+
+- L1, R1, QUADRADO, R1, ESQUERDA, R2, R1, ESQUERDA, QUADRADO, DIREITA, L1, L1
+
+## Ataques corpo a corpo explosivos
+
+- DIREITA, ESQUERDA, X, TRIÂNGULO, R1, CÍRCULO, CÍRCULO, CÍRCULO, L2
 
 - Super pulo => ESQUERDA, ESQUERDA, TRIÂNGULO, TRIÂNGULO, DIREITA, DIREITA, ESQUERDA, DIREITA, QUADRADO, R1, R2
 

@@ -5,6 +5,9 @@ import {
   playerCheatsXBX,
   worldCheatsXBX,
   vehicleCheatsXBX,
+  playerCheatsCOMP,
+  worldCheatsCOMP,
+  vehicleCheatsCOMP,
 } from "../api_cheats/dados_gta5.js";
 
 function createCheatsCard(list_cheats, idCard) {
@@ -59,3 +62,16 @@ createCheatsCard(vehicleCheatsPS, "card_vehicle_PS");
 createCheatsCard(playerCheatsXBX, "card_player_XBX");
 createCheatsCard(worldCheatsXBX, "card_world_XBX");
 createCheatsCard(vehicleCheatsXBX, "card_vehicle_XBX");
+
+createCheatsCard(playerCheatsCOMP, "card_player_COMP");
+createCheatsCard(worldCheatsCOMP, "card_world_COMP");
+createCheatsCard(vehicleCheatsCOMP, "card_vehicle_COMP");
+
+function defaultOnLoadCheats(idContainer, idTab) {
+  let container_default, tab_default;
+  container_default = document.getElementById(idContainer).style.display =
+    "block";
+  tab_default = document.getElementById(idTab).className += " active";
+}
+
+defaultOnLoadCheats("ps_cheats", "tab__ps");
