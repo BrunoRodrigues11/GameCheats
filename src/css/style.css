@@ -4,9 +4,9 @@
 }
 .card__game:hover,
 .card__cheat:hover {
-  -webkit-box-shadow: -4px 13px 37px 3px rgba(156, 156, 156, 0.55);
-  -moz-box-shadow: -4px 13px 37px 3px rgba(156, 156, 156, 0.55);
-  box-shadow: -4px 13px 37px 3px rgba(156, 156, 156, 0.55);
+  -webkit-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
   transition: 0.5s ease;
 }
 

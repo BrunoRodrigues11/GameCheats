@@ -66,12 +66,3 @@ createCheatsCard(vehicleCheatsXBX, "card_vehicle_XBX");
 createCheatsCard(playerCheatsCOMP, "card_player_COMP");
 createCheatsCard(worldCheatsCOMP, "card_world_COMP");
 createCheatsCard(vehicleCheatsCOMP, "card_vehicle_COMP");
-
-function defaultOnLoadCheats(idContainer, idTab) {
-  let container_default, tab_default;
-  container_default = document.getElementById(idContainer).style.display =
-    "block";
-  tab_default = document.getElementById(idTab).className += " active";
-}
-
-defaultOnLoadCheats("ps_cheats", "tab__ps");

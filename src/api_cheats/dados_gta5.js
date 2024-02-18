@@ -405,7 +405,7 @@ const vehicleCheatsPS = [
       "ESQUERDA, ESQUERDA, DIREITA, DIREITA, ESQUERDA, DIREITA, QUADRADO, CÍRCULO, TRIÂNGULO, R1, R2",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/veiculos/bmx.png",
     imagems: [
       "../assets/icons/ps/ps_Esquerda.svg",
       "../assets/icons/ps/ps_Esquerda.svg",
