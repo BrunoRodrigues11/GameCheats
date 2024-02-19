@@ -405,7 +405,7 @@ const vehicleCheatsPS = [
       "ESQUERDA, ESQUERDA, DIREITA, DIREITA, ESQUERDA, DIREITA, QUADRADO, CÍRCULO, TRIÂNGULO, R1, R2",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "../assets/img/veiculos/bmx.png",
+    ilustracao: "../assets/img/vehicles/bmx.png",
     imagems: [
       "../assets/icons/ps/ps_Esquerda.svg",
       "../assets/icons/ps/ps_Esquerda.svg",
@@ -427,7 +427,7 @@ const vehicleCheatsPS = [
       "CÍRCULO, CÍRCULO, L1, CÍRCULO, CÍRCULO, CÍRCULO, L1, L2, R1, TRIÂNGULO, CÍRCULO, TRIÂNGULO",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/buzzard.png",
     imagems: [
       "../assets/icons/ps/ps_R2.svg",
       "../assets/icons/ps/ps_X.svg",

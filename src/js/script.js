@@ -20,6 +20,8 @@ function createCheatsCard(list_cheats, idCard) {
     card_content.classList.add("card");
     card_content.classList.add("mt-3");
     card_content.classList.add("card__cheat");
+    card_content.dataset.veiculoId = codigo.id;
+    card_content.dataset.ilustracao = codigo.ilustracao;
     card.appendChild(card_content);
 
     // Criar elemento card body
@@ -66,3 +68,32 @@ createCheatsCard(vehicleCheatsXBX, "card_vehicle_XBX");
 createCheatsCard(playerCheatsCOMP, "card_player_COMP");
 createCheatsCard(worldCheatsCOMP, "card_world_COMP");
 createCheatsCard(vehicleCheatsCOMP, "card_vehicle_COMP");
+
+// Modal de veiculos
+const cardsSection = document.getElementById("card_vehicle_PS");
+const modal = document.getElementById("modal");
+const modalImage = document.getElementById("modalImage");
+const closeModalButton = document.getElementsByClassName("close")[0];
+
+// Adicione um evento de clique a seção de cards
+cardsSection.addEventListener("click", function (event) {
+  const veiculoId = event.target.closest(".card").dataset.veiculoId;
+  const ilustracao = event.target.closest(".card").dataset.ilustracao;
+
+  if (veiculoId) {
+    modalImage.src = ilustracao;
+    modal.style.display = "block";
+  }
+});
+
+// Feche o modal se o usuário clicar no botão de fechar
+closeModalButton.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+// Feche o modal se o usuário clicar fora do modal
+window.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
