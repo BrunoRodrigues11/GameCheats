@@ -10,6 +10,7 @@ import {
   vehicleCheatsCOMP,
 } from "../api_cheats/dados_gta5.js";
 
+// Criar cards de cheats
 function createCheatsCard(list_cheats, idCard) {
   let card = document.getElementById(idCard);
 
@@ -20,8 +21,11 @@ function createCheatsCard(list_cheats, idCard) {
     card_content.classList.add("card");
     card_content.classList.add("mt-3");
     card_content.classList.add("card__cheat");
-    card_content.dataset.veiculoId = codigo.id;
-    card_content.dataset.ilustracao = codigo.ilustracao;
+    if (codigo.secao === "Veículos") {
+      card_content.dataset.veiculoId = codigo.id;
+      card_content.dataset.ilustracao = codigo.ilustracao;
+      card_content.dataset.veiculo = codigo.nome;
+    }
     card.appendChild(card_content);
 
     // Criar elemento card body
@@ -35,9 +39,28 @@ function createCheatsCard(list_cheats, idCard) {
     card_body.appendChild(card_container);
 
     // Criar elemento de titulo
-    const codigoTitulo = document.createElement("h5");
-    codigoTitulo.textContent = `${codigo.id} - ${codigo.nome}`;
+    let codigoTitulo = document.createElement("h5");
+    codigoTitulo.classList.add("card__title");
+    codigoTitulo.textContent = `${codigo.nome}`;
     card_container.appendChild(codigoTitulo);
+
+    // Criar elemento de botão para abrir o modal de visualização da imagem do veiculo
+    if (codigo.secao === "Veículos") {
+      // Criar elemento de icone de olho
+      let icon = document.createElement("img");
+      icon.src = "../assets/icons/eye.png";
+      icon.alt = "icone de olho";
+      icon.width = "20";
+      icon.height = "20";
+
+      // Criar elemento de botão
+      let codigoButton = document.createElement("button");
+      codigoButton.classList.add("btn");
+      codigoButton.classList.add("btn-primary");
+      codigoButton.classList.add("btn-sm");
+      codigoButton.appendChild(icon);
+      codigoTitulo.appendChild(codigoButton);
+    }
 
     // Criar elemento de imagemn
     let card_img = document.createElement("div");
@@ -47,7 +70,7 @@ function createCheatsCard(list_cheats, idCard) {
     // Iterar sobre o array de imagens dentro de cada objeto
     codigo.imagems.forEach((imagem) => {
       // Criar elemento de imagem
-      const codigoImg = document.createElement("img");
+      let codigoImg = document.createElement("img");
       codigoImg.classList.add("img");
       codigoImg.src = imagem;
       codigoImg.alt = "icone do cheat";
@@ -69,31 +92,29 @@ createCheatsCard(playerCheatsCOMP, "card_player_COMP");
 createCheatsCard(worldCheatsCOMP, "card_world_COMP");
 createCheatsCard(vehicleCheatsCOMP, "card_vehicle_COMP");
 
-// Modal de veiculos
-const cardsSection = document.getElementById("card_vehicle_PS");
-const modal = document.getElementById("modal");
-const modalImage = document.getElementById("modalImage");
-const closeModalButton = document.getElementsByClassName("close")[0];
+// Criar modal de veiculos
+function createModalVehicles(idCard) {
+  // Modal de veiculos
+  let cards__section = document.getElementById(idCard);
+  let modal__image = document.getElementById("modal__image");
+  let modal__title = document.getElementById("modal__title");
 
-// Adicione um evento de clique a seção de cards
-cardsSection.addEventListener("click", function (event) {
-  const veiculoId = event.target.closest(".card").dataset.veiculoId;
-  const ilustracao = event.target.closest(".card").dataset.ilustracao;
+  // Adicione um evento de clique a seção de cards
+  cards__section.addEventListener("click", function (event) {
+    let veiculoId = event.target.closest(".card").dataset.veiculoId;
+    let ilustracao = event.target.closest(".card").dataset.ilustracao;
+    let veiculo = event.target.closest(".card").dataset.veiculo;
 
-  if (veiculoId) {
-    modalImage.src = ilustracao;
-    modal.style.display = "block";
-  }
-});
+    if (veiculoId) {
+      modal__image.src = ilustracao;
+      modal__image.alt = veiculo;
+      modal__title.textContent = veiculo;
+      // Mostrar o modal
+      $("#modal").modal("show");
+    }
+  });
+}
 
-// Feche o modal se o usuário clicar no botão de fechar
-closeModalButton.addEventListener("click", function () {
-  modal.style.display = "none";
-});
-
-// Feche o modal se o usuário clicar fora do modal
-window.addEventListener("click", function (event) {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-});
+createModalVehicles("card_vehicle_PS");
+createModalVehicles("card_vehicle_XBX");
+createModalVehicles("card_vehicle_COMP");

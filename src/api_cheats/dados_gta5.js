@@ -1,3 +1,4 @@
+// Cheats para PlayStation
 const playerCheatsPS = [
   {
     id: 1,
@@ -445,7 +446,7 @@ const vehicleCheatsPS = [
     descricao: "CÍRCULO, L1, ESQUERDA, R1, L2, X, R1, L1, CÍRCULO, X",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/caddy.png",
     imagems: [
       "../assets/icons/ps/ps_Bolinha.svg",
       "../assets/icons/ps/ps_L1.svg",
@@ -465,7 +466,7 @@ const vehicleCheatsPS = [
     descricao: "R1, CÍRCULO, R2, DIREITA, L1, L2, X, X, QUADRADO, R1",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/comet.png",
     imagems: [
       "../assets/icons/ps/ps_R1.svg",
       "../assets/icons/ps/ps_Bolinha.svg",
@@ -487,7 +488,7 @@ const vehicleCheatsPS = [
       "DIREITA, ESQUERDA, R1, R1, R1, ESQUERDA, TRIÂNGULO, TRIÂNGULO, X, CÍRCULO, L1, L1",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/duster.png",
     imagems: [
       "../assets/icons/ps/ps_Direita.svg",
       "../assets/icons/ps/ps_Esquerda.svg",
@@ -509,7 +510,7 @@ const vehicleCheatsPS = [
     descricao: "R2, DIREITA, L2, ESQUERDA, ESQUERDA, R1, L1, CÍRCULO, DIREITA",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/limousine.png",
     imagems: [
       "../assets/icons/ps/ps_R2.svg",
       "../assets/icons/ps/ps_Direita.svg",
@@ -529,7 +530,7 @@ const vehicleCheatsPS = [
       "R1, DIREITA, ESQUERDA, DIREITA, R2, ESQUERDA, DIREITA, QUADRADO, DIREITA, L2, L1, L1",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/pcj600.png",
     imagems: [
       "../assets/icons/ps/ps_R1.svg",
       "../assets/icons/ps/ps_Direita.svg",
@@ -552,7 +553,7 @@ const vehicleCheatsPS = [
       "R2, L1, CÍRCULO, DIREITA, L1, R1, DIREITA, ESQUERDA, CÍRCULO, R2",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/rapidGT.png",
     imagems: [
       "../assets/icons/ps/ps_R2.svg",
       "../assets/icons/ps/ps_L1.svg",
@@ -574,7 +575,7 @@ const vehicleCheatsPS = [
       "CÍRCULO, X, L1, CÍRCULO, CÍRCULO, L1, CÍRCULO, R1, R2, L2, L1, L1",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/sanchez.png",
     imagems: [
       "../assets/icons/ps/ps_Bolinha.svg",
       "../assets/icons/ps/ps_X.svg",
@@ -597,7 +598,7 @@ const vehicleCheatsPS = [
       "CÍRCULO, DIREITA, L1, L2, ESQUERDA, R1, L1, L1, ESQUERDA, ESQUERDA, X, TRIÂNGULO",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/acrobatico.png",
     imagems: [
       "../assets/icons/ps/ps_Bolinha.svg",
       "../assets/icons/ps/ps_Direita.svg",
@@ -620,7 +621,7 @@ const vehicleCheatsPS = [
       "CÍRCULO, R1, CÍRCULO, R1, ESQUERDA, ESQUERDA, R1, L1, CÍRCULO, DIREITA",
     plataforma: "PS",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/trashmaster.png",
     imagems: [
       "../assets/icons/ps/ps_Bolinha.svg",
       "../assets/icons/ps/ps_R1.svg",
@@ -635,6 +636,7 @@ const vehicleCheatsPS = [
   },
 ];
 
+// Cheats para Xbox
 const playerCheatsXBX = [
   {
     id: 1,
@@ -1036,7 +1038,7 @@ const vehicleCheatsXBX = [
       "ESQUERDA, ESQUERDA, DIREITA, DIREITA, ESQUERDA, DIREITA, X, B, Y, RB, RT",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/bmx.png",
     imagems: [
       "../assets/icons/xbox/xb_Esquerda.svg",
       "../assets/icons/xbox/xb_Esquerda.svg",
@@ -1057,7 +1059,7 @@ const vehicleCheatsXBX = [
     descricao: "B, B, LB, B, B, B, LB, LT, RB, Y, B, Y",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/buzzard.png",
     imagems: [
       "../assets/icons/xbox/xb_RT.svg",
       "../assets/icons/xbox/xb_A.svg",
@@ -1075,7 +1077,7 @@ const vehicleCheatsXBX = [
     descricao: "B, LB, ESQUERDA, RB, LT, A, RB, LB, B, A",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/caddy.png",
     imagems: [
       "../assets/icons/xbox/xb_B.svg",
       "../assets/icons/xbox/xb_LB.svg",
@@ -1095,7 +1097,7 @@ const vehicleCheatsXBX = [
     descricao: "RB, B, RT, DIREITA, LB, LT, A, A, X, RB",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/comet.png",
     imagems: [
       "../assets/icons/xbox/xb_RB.svg",
       "../assets/icons/xbox/xb_B.svg",
@@ -1116,7 +1118,7 @@ const vehicleCheatsXBX = [
     descricao: "DIREITA, ESQUERDA, RB, RB, RB, ESQUERDA, Y, Y, A, B, LB, LB",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/duster.png",
     imagems: [
       "../assets/icons/xbox/xb_Direita.svg",
       "../assets/icons/xbox/xb_Esquerda.svg",
@@ -1138,7 +1140,7 @@ const vehicleCheatsXBX = [
     descricao: "RT, DIREITA, LT, ESQUERDA, ESQUERDA, RB, LB, B, DIREITA",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/limousine.png",
     imagems: [
       "../assets/icons/xbox/xb_RT.svg",
       "../assets/icons/xbox/xb_Direita.svg",
@@ -1158,7 +1160,7 @@ const vehicleCheatsXBX = [
       "RB, DIREITA, ESQUERDA, DIREITA, RT, ESQUERDA, DIREITA, X, DIREITA, LT, LB, LB",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/pcj600.png",
     imagems: [
       "../assets/icons/xbox/xb_RB.svg",
       "../assets/icons/xbox/xb_Direita.svg",
@@ -1180,7 +1182,7 @@ const vehicleCheatsXBX = [
     descricao: "RT, LB, B, DIREITA, LB, RB, DIREITA, ESQUERDA, B, RT",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/rapidGT.png",
     imagems: [
       "../assets/icons/xbox/xb_RT.svg",
       "../assets/icons/xbox/xb_LB.svg",
@@ -1201,7 +1203,7 @@ const vehicleCheatsXBX = [
     descricao: "B, A, LB, B, B, LB, B, RB, RT, LT, LB, LB",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/sanchez.png",
     imagems: [
       "../assets/icons/xbox/xb_B.svg",
       "../assets/icons/xbox/xb_A.svg",
@@ -1224,7 +1226,7 @@ const vehicleCheatsXBX = [
       "B, DIREITA, LB, LT, ESQUERDA, RB, LB, LB, ESQUERDA, ESQUERDA, A, Y",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/acrobatico.png",
     imagems: [
       "../assets/icons/xbox/xb_B.svg",
       "../assets/icons/xbox/xb_Direita.svg",
@@ -1246,7 +1248,7 @@ const vehicleCheatsXBX = [
     descricao: "B, RB, B, RB, ESQUERDA, ESQUERDA, RB, LB, B, DIREITA",
     plataforma: "XBOX",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/trashmaster.png",
     imagems: [
       "../assets/icons/xbox/xb_B.svg",
       "../assets/icons/xbox/xb_RB.svg",
@@ -1261,6 +1263,7 @@ const vehicleCheatsXBX = [
   },
 ];
 
+// Cheats para PC
 const playerCheatsCOMP = [
   {
     id: 1,
@@ -1554,7 +1557,7 @@ const vehicleCheatsCOMP = [
     descricao: "BANDIT",
     plataforma: "COMP",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/bmx.png",
     imagems: [
       "../assets/icons/comp/B.svg",
       "../assets/icons/comp/A.svg",
@@ -1570,7 +1573,7 @@ const vehicleCheatsCOMP = [
     descricao: "BUZZOFF",
     plataforma: "COMP",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/buzzard.png",
     imagems: [
       "../assets/icons/comp/B.svg",
       "../assets/icons/comp/U.svg",
@@ -1587,7 +1590,7 @@ const vehicleCheatsCOMP = [
     descricao: "COMET",
     plataforma: "COMP",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/comet.png",
     imagems: [
       "../assets/icons/comp/C.svg",
       "../assets/icons/comp/O.svg",
@@ -1602,7 +1605,7 @@ const vehicleCheatsCOMP = [
     descricao: "VINEWOOD",
     plataforma: "COMP",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/limousine.png",
     imagems: [
       "../assets/icons/comp/V.svg",
       "../assets/icons/comp/I.svg",
@@ -1620,7 +1623,7 @@ const vehicleCheatsCOMP = [
     descricao: "ROCKET",
     plataforma: "COMP",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/pcj600.png",
     imagems: [
       "../assets/icons/comp/R.svg",
       "../assets/icons/comp/O.svg",
@@ -1636,7 +1639,7 @@ const vehicleCheatsCOMP = [
     descricao: "RAPIDGT",
     plataforma: "COMP",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/rapidGT.png",
     imagems: [
       "../assets/icons/comp/R.svg",
       "../assets/icons/comp/A.svg",
@@ -1654,7 +1657,7 @@ const vehicleCheatsCOMP = [
     descricao: "OFFROAD",
     plataforma: "COMP",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/sanchez.png",
     imagems: [
       "../assets/icons/comp/O.svg",
       "../assets/icons/comp/F.svg",
@@ -1671,7 +1674,7 @@ const vehicleCheatsCOMP = [
     descricao: "BARNSTORM",
     plataforma: "COMP",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/acrobatico.png",
     imagems: [
       "../assets/icons/comp/B.svg",
       "../assets/icons/comp/A.svg",
@@ -1690,7 +1693,7 @@ const vehicleCheatsCOMP = [
     descricao: "TRASHED",
     plataforma: "COMP",
     secao: "Veículos",
-    ilustracao: "*imagem*",
+    ilustracao: "../assets/img/vehicles/trashmaster.png",
     imagems: [
       "../assets/icons/comp/T.svg",
       "../assets/icons/comp/R.svg",
@@ -1702,6 +1705,7 @@ const vehicleCheatsCOMP = [
     ],
   },
 ];
+
 export {
   playerCheatsPS,
   worldCheatsPS,

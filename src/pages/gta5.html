@@ -15,7 +15,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <h1 class="text-center">Game Cheats</h1>
+        <h1 class="text-center">Game Cheats <i class="bi bi-eye"></i></h1>
         <h3 class="text-center">GTA 5</h3>
       </div>
       <div>
@@ -234,13 +234,56 @@
       </div>
     </div>
 
-    <div id="modal">
-      <span class="close">&times;</span>
-      <img id="modalImage" src="" alt="Imagem do Veículo" />
+    <div class="modal" tabindex="-1" id="modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal__title"></h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <img
+              id="modal__image"
+              src=""
+              alt="Imagem do Veículo"
+              class="img-fluid"
+            />
+          </div>
+          <div class="modal-footer">
+            <p>
+              Fonte:
+              <a
+                href="https://www.gtabase.com/grand-theft-auto-v/vehicles/#sort=attr.ct3.frontend_value&sortdir=desc"
+                >www.gtabase.com</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script type="module" src="../js/script.js"></script>
     <script type="module" src="../api_cheats/dados_gta5.js"></script>
     <script src="../js/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
