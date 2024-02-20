@@ -1,0 +1,11 @@
+@media screen and (max-width: 415px) {
+  .card__version {
+    top: 60px;
+    right: 100px;
+  }
+
+  .card__version h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

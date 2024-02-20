@@ -32,7 +32,6 @@
   right: 550px;
   text-align: center;
   padding: 0.2rem;
-  border-radius: 0.5rem;
 }
 
 .card__version h5 {
@@ -40,10 +39,10 @@
   font-weight: bold;
 }
 
-.card__codigo {
+/* .card__codigo {
   display: flex;
   justify-content: start;
-}
+} */
 
 .card__codigo img {
   width: 25px;
