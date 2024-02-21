@@ -105,6 +105,7 @@ function createModalVehicles(idCard) {
     let ilustracao = event.target.closest(".card").dataset.ilustracao;
     let veiculo = event.target.closest(".card").dataset.veiculo;
 
+    // Vrifica se o veiculoId existe no elemento clicado
     if (veiculoId) {
       modal__image.src = ilustracao;
       modal__image.alt = veiculo;
