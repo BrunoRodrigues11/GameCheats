@@ -21,11 +21,14 @@ function createCheatsCard(list_cheats, idCard) {
     card_content.classList.add("card");
     card_content.classList.add("mt-3");
     card_content.classList.add("card__cheat");
+
     if (codigo.secao === "Veículos") {
       card_content.dataset.veiculoId = codigo.id;
       card_content.dataset.ilustracao = codigo.ilustracao;
       card_content.dataset.veiculo = codigo.nome;
     }
+    
+    card_content.dataset.secao = codigo.secao;
     card.appendChild(card_content);
 
     // Criar elemento card body

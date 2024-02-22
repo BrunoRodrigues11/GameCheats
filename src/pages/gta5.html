@@ -56,12 +56,10 @@
         </div>
       </nav>
     </header>
+
     <div class="container mt-3">
       <div class="row">
-        <img src="../assets/img/gta5.jpg" alt="Pôster do GTA 5" />
-      </div>
-      <div class="row mt-3">
-        <div class="col-md-6">
+        <div class="col-sm-12 col-md-12 col-lg-5 mt-3">
           <input
             type="text"
             id="searchInput"
@@ -69,7 +67,15 @@
             class="form-control"
           />
         </div>
-        <div class="col-md-6">
+        <div class="col-sm-12 col-md-12 col-lg-5 mt-3">
+          <select class="form-select" id="selectSection">
+            <option value="">- Filtrar -</option>
+            <option value="jogador">Player Cheats</option>
+            <option value="mundo">World Cheats</option>
+            <option value="veiculo">Vehicle Cheats</option>
+          </select>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-2 mt-3">
           <button class="btn btn-success" id="btnSearch">Pesquisar</button>
         </div>
       </div>
