@@ -10,6 +10,9 @@ import {
   vehicleCheatsCOMP,
 } from "../api_cheats/dados_gta5.js";
 
+const DIV_ELEMENT = "div";
+const IMG_ELEMENT = "img";
+
 // Criar cards de cheats
 function createCheatsCard(list_cheats, idCard) {
   let card = document.getElementById(idCard);
@@ -17,7 +20,7 @@ function createCheatsCard(list_cheats, idCard) {
   // Iterar sobre o array de objetos
   list_cheats.forEach((codigo) => {
     // Criar elemento de card content
-    let card_content = document.createElement("div");
+    let card_content = document.createElement(DIV_ELEMENT);
     card_content.className = "card mt-3 card__cheat";
 
     if (codigo.secao === "Veículos") {
@@ -30,12 +33,12 @@ function createCheatsCard(list_cheats, idCard) {
     card.appendChild(card_content);
 
     // Criar elemento card body
-    let card_body = document.createElement("div");
+    let card_body = document.createElement(DIV_ELEMENT);
     card_body.classList.add("card-body");
     card_content.appendChild(card_body);
 
     // Criar elemento de card
-    let card_container = document.createElement("div");
+    let card_container = document.createElement(DIV_ELEMENT);
     card_container.classList.add("card__container");
     card_body.appendChild(card_container);
 
@@ -48,7 +51,7 @@ function createCheatsCard(list_cheats, idCard) {
     // Criar elemento de botão para abrir o modal de visualização da imagem do veiculo
     if (codigo.secao === "Veículos") {
       // Criar elemento de icone de olho
-      let icon = document.createElement("img");
+      let icon = document.createElement(IMG_ELEMENT);
       icon.src = "../assets/icons/eye.png";
       icon.alt = "icone de olho";
       icon.width = "20";
@@ -62,14 +65,14 @@ function createCheatsCard(list_cheats, idCard) {
     }
 
     // Criar elemento de imagemn
-    let card_img = document.createElement("div");
+    let card_img = document.createElement(DIV_ELEMENT);
     card_img.classList.add("card__codigo");
     card_container.appendChild(card_img);
 
     // Iterar sobre o array de imagens dentro de cada objeto
     codigo.imagems.forEach((imagem) => {
       // Criar elemento de imagem
-      let codigoImg = document.createElement("img");
+      let codigoImg = document.createElement(IMG_ELEMENT);
       codigoImg.classList.add("img");
       codigoImg.src = imagem;
       codigoImg.alt = "icone do cheat";
@@ -99,7 +102,7 @@ function createModalVehicles(idCard) {
   let modal__title = document.getElementById("modal__title");
 
   // Adicione um evento de clique a seção de cards
-  cards__section.addEventListener("click", function (event) {
+  cards__section.addEventListener("click", (event) => {
     let veiculoId = event.target.closest(".card").dataset.veiculoId;
     let ilustracao = event.target.closest(".card").dataset.ilustracao;
     let veiculo = event.target.closest(".card").dataset.veiculo;

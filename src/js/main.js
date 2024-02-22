@@ -1,66 +1,89 @@
+const BLOCK_DISPLAY = "block";
+const NONE_DISPLAY = "none";
+const ACTIVE_CLASS = "active";
+
 // Abre a aba de cheats por padrão
-function defaultOnLoadCheats(idContainer, idTab) {
-  const container_default = (document.getElementById(
-    idContainer
-  ).style.display = "block");
-  const tab_default = document.getElementById(idTab).classList.add("active");
+function defaultTabCheat(idContainer, idTab) {
+  document.getElementById(idContainer).style.display = BLOCK_DISPLAY;
+  document.getElementById(idTab).classList.add(ACTIVE_CLASS);
 }
 
-let cheatsContainerId = "ps_cheats";
-let tabId = "tab__ps";
+const cheatsContainerId = "ps_cheats";
+const tabId = "tab__ps";
 
-defaultOnLoadCheats(cheatsContainerId, tabId);
+defaultTabCheat(cheatsContainerId, tabId);
 
 // Abre as abas de cheats
 function openPlataformCheats(evt, plataforma) {
   let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+    tabcontent[i].style.display = NONE_DISPLAY;
   }
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].className = tablinks[i].className.replace(ACTIVE_CLASS, "");
   }
-  document.getElementById(plataforma).style.display = "block";
-  evt.currentTarget.classList.add("active");
+  document.getElementById(plataforma).style.display = BLOCK_DISPLAY;
+  evt.currentTarget.classList.add(ACTIVE_CLASS);
 }
 
 // Pesquisar cheats
 const searchInput = document.getElementById("searchInput");
 const selectSection = document.getElementById("selectSection");
-const btnSearch = document.getElementById("btnSearch");
 
 function searchCheat() {
-  // Obtendo o valor digitado no input de pesquisa
   const searchTerm = searchInput.value.toLowerCase();
-
-  // Iterando sobre os cards de cheats e mostrando apenas os que correspondem ao termo pesquisado
   const cheatsCard = Array.from(document.getElementsByClassName("card__cheat"));
   for (const cheat of cheatsCard) {
     const cheatTitle = cheat.querySelector("h5").textContent.toLowerCase();
-    cheat.style.display = cheatTitle.includes(searchTerm) ? "block" : "none";
+    const cheatSection = cheat.dataset.secao.toLowerCase();
+    if (cheatTitle.includes(searchTerm)) {
+      cheat.style.display = BLOCK_DISPLAY;
+      filterBannerCheats(cheatSection);
+    } else {
+      cheat.style.display = NONE_DISPLAY;
+    }
   }
 }
 
-// Quando o usuário digita algo no input de pesquisa, chama a função searchCheat
 searchInput.addEventListener("input", searchCheat);
 
-// Filtrar cheats por plataforma
+// Filtrar cheats por secao
 function filterCheats() {
-  // Obtendo o valor selecionado no select
   const selectTerm = selectSection.value.toLowerCase();
-
-  // Iterando sobre os cards de cheats e mostrando apenas os que correspondem ao termo pesquisado
   const cheatsCard = Array.from(document.getElementsByClassName("card__cheat"));
   for (const cheat of cheatsCard) {
     const cheatSection = cheat.dataset.secao.toLowerCase();
-    cheat.style.display = cheatSection.includes(selectTerm) ? "block" : "none";
+    cheat.style.display = cheatSection.includes(selectTerm)
+      ? BLOCK_DISPLAY
+      : NONE_DISPLAY;
+  }
+  filterBannerCheats(selectTerm);
+}
+
+function filterBannerCheats(selectTerm) {
+  const cheatBanner = Array.from(
+    document.getElementsByClassName("card__banner")
+  );
+  for (const banner of cheatBanner) {
+    const bannerSection = banner.dataset.secao.toLowerCase();
+    banner.style.display = bannerSection.includes(selectTerm)
+      ? BLOCK_DISPLAY
+      : NONE_DISPLAY;
   }
 }
 
-// Quando o usuário seleciona uma opção no select, chama a função filterCheats
 selectSection.addEventListener("change", filterCheats);
 
-const cheatBanner = Array.from(document.getElementsByClassName("card__banner"));
-console.log(cheatBanner);
+// Limpar pesquisa e filtro
+const btnSearchClear = document.getElementById("btnSearchClear");
+
+function clearSearchFilter() {
+  searchInput.value = "";
+  selectSection.value = "";
+  searchCheat();
+  filterCheats();
+}
+
+btnSearchClear.addEventListener("click", clearSearchFilter);
