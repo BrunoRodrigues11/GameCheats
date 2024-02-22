@@ -18,16 +18,14 @@ function createCheatsCard(list_cheats, idCard) {
   list_cheats.forEach((codigo) => {
     // Criar elemento de card content
     let card_content = document.createElement("div");
-    card_content.classList.add("card");
-    card_content.classList.add("mt-3");
-    card_content.classList.add("card__cheat");
+    card_content.className = "card mt-3 card__cheat";
 
     if (codigo.secao === "Veículos") {
       card_content.dataset.veiculoId = codigo.id;
       card_content.dataset.ilustracao = codigo.ilustracao;
       card_content.dataset.veiculo = codigo.nome;
     }
-    
+
     card_content.dataset.secao = codigo.secao;
     card.appendChild(card_content);
 
@@ -58,9 +56,7 @@ function createCheatsCard(list_cheats, idCard) {
 
       // Criar elemento de botão
       let codigoButton = document.createElement("button");
-      codigoButton.classList.add("btn");
-      codigoButton.classList.add("btn-primary");
-      codigoButton.classList.add("btn-sm");
+      codigoButton.className = "btn btn-primary btn-sm";
       codigoButton.appendChild(icon);
       codigoTitulo.appendChild(codigoButton);
     }
@@ -108,15 +104,19 @@ function createModalVehicles(idCard) {
     let ilustracao = event.target.closest(".card").dataset.ilustracao;
     let veiculo = event.target.closest(".card").dataset.veiculo;
 
-    // Vrifica se o veiculoId existe no elemento clicado
+    // Verifica se o veiculoId existe no elemento clicado
     if (veiculoId) {
-      modal__image.src = ilustracao;
-      modal__image.alt = veiculo;
-      modal__title.textContent = veiculo;
-      // Mostrar o modal
-      $("#modal").modal("show");
+      showModal(ilustracao, veiculo);
     }
   });
+}
+
+// Mostrar o modal
+function showModal(ilustracao, veiculo) {
+  modal__image.src = ilustracao;
+  modal__image.alt = veiculo;
+  modal__title.textContent = veiculo;
+  $("#modal").modal("show");
 }
 
 createModalVehicles("card_vehicle_PS");

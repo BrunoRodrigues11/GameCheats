@@ -1,12 +1,15 @@
 // Abre a aba de cheats por padrão
 function defaultOnLoadCheats(idContainer, idTab) {
-  let container_default, tab_default;
-  container_default = document.getElementById(idContainer).style.display =
-    "block";
-  tab_default = document.getElementById(idTab).className += " active";
+  const container_default = (document.getElementById(
+    idContainer
+  ).style.display = "block");
+  const tab_default = document.getElementById(idTab).classList.add("active");
 }
 
-defaultOnLoadCheats("ps_cheats", "tab__ps");
+let cheatsContainerId = "ps_cheats";
+let tabId = "tab__ps";
+
+defaultOnLoadCheats(cheatsContainerId, tabId);
 
 // Abre as abas de cheats
 function openPlataformCheats(evt, plataforma) {
@@ -20,50 +23,44 @@ function openPlataformCheats(evt, plataforma) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(plataforma).style.display = "block";
-  evt.currentTarget.className += " active";
+  evt.currentTarget.classList.add("active");
 }
 
 // Pesquisar cheats
-let searchInput = document.getElementById("searchInput");
-let selectSection = document.getElementById("selectSection");
-let btnSearch = document.getElementById("btnSearch");
+const searchInput = document.getElementById("searchInput");
+const selectSection = document.getElementById("selectSection");
+const btnSearch = document.getElementById("btnSearch");
 
 function searchCheat() {
   // Obtendo o valor digitado no input de pesquisa
-  let searchTerm = searchInput.value.toLowerCase();
+  const searchTerm = searchInput.value.toLowerCase();
 
   // Iterando sobre os cards de cheats e mostrando apenas os que correspondem ao termo pesquisado
-  let cheatsCard = document.getElementsByClassName("card__cheat");
-  for (let cheat of cheatsCard) {
-    let cheatTitle = cheat.querySelector("h5").textContent.toLowerCase();
-    if (cheatTitle.includes(searchTerm)) {
-      cheat.style.display = "block"; // Mostra o card
-    } else {
-      cheat.style.display = "none"; // Esconde o card
-    }
+  const cheatsCard = Array.from(document.getElementsByClassName("card__cheat"));
+  for (const cheat of cheatsCard) {
+    const cheatTitle = cheat.querySelector("h5").textContent.toLowerCase();
+    cheat.style.display = cheatTitle.includes(searchTerm) ? "block" : "none";
   }
 }
 
 // Quando o usuário digita algo no input de pesquisa, chama a função searchCheat
 searchInput.addEventListener("input", searchCheat);
-// btnSearch.addEventListener("click", searchCheat);
 
 // Filtrar cheats por plataforma
 function filterCheats() {
   // Obtendo o valor selecionado no select
-  let selectTerm = selectSection.value.toLowerCase();
+  const selectTerm = selectSection.value.toLowerCase();
 
   // Iterando sobre os cards de cheats e mostrando apenas os que correspondem ao termo pesquisado
-  let cheatsCard = document.getElementsByClassName("card__cheat");
-  for (let cheat of cheatsCard) {
-    let cheatSection = cheat.dataset.secao.toLowerCase();
-    if (cheatSection.includes(selectTerm)) {
-      cheat.style.display = "block"; // Mostra o card
-    } else {
-      cheat.style.display = "none"; // Esconde o card
-    }
+  const cheatsCard = Array.from(document.getElementsByClassName("card__cheat"));
+  for (const cheat of cheatsCard) {
+    const cheatSection = cheat.dataset.secao.toLowerCase();
+    cheat.style.display = cheatSection.includes(selectTerm) ? "block" : "none";
   }
 }
 
 // Quando o usuário seleciona uma opção no select, chama a função filterCheats
 selectSection.addEventListener("change", filterCheats);
+
+const cheatBanner = Array.from(document.getElementsByClassName("card__banner"));
+console.log(cheatBanner);
