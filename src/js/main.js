@@ -1,17 +1,16 @@
 const BLOCK_DISPLAY = "block";
 const NONE_DISPLAY = "none";
 const ACTIVE_CLASS = "active";
+const cheatsContainerId = "ps_cheats";
+const tabId = "tab__ps";
+const searchInput = document.getElementById("searchInput");
+const selectSection = document.getElementById("selectSection");
 
 // Abre a aba de cheats por padrão
 function defaultTabCheat(idContainer, idTab) {
   document.getElementById(idContainer).style.display = BLOCK_DISPLAY;
   document.getElementById(idTab).classList.add(ACTIVE_CLASS);
 }
-
-const cheatsContainerId = "ps_cheats";
-const tabId = "tab__ps";
-
-defaultTabCheat(cheatsContainerId, tabId);
 
 // Abre as abas de cheats
 function openPlataformCheats(evt, plataforma) {
@@ -28,16 +27,16 @@ function openPlataformCheats(evt, plataforma) {
   evt.currentTarget.classList.add(ACTIVE_CLASS);
 }
 
-// Pesquisar cheats
-const searchInput = document.getElementById("searchInput");
-const selectSection = document.getElementById("selectSection");
+defaultTabCheat(cheatsContainerId, tabId);
 
+// Pesquisar cheats
 function searchCheat() {
   const searchTerm = searchInput.value.toLowerCase();
   const cheatsCard = Array.from(document.getElementsByClassName("card__cheat"));
   const cheatBanner = Array.from(
     document.getElementsByClassName("card__banner")
   );
+  let hasResults = false;
 
   for (const cheat of cheatsCard) {
     const cheatTitle = cheat.querySelector("h5").textContent.toLowerCase();
@@ -46,6 +45,7 @@ function searchCheat() {
     if (cheatTitle.includes(searchTerm)) {
       cheat.style.display = BLOCK_DISPLAY;
       filterBannerCheats(cheatSection);
+      hasResults = true;
     } else {
       cheat.style.display = NONE_DISPLAY;
     }
@@ -57,8 +57,29 @@ function searchCheat() {
       banner.style.display = BLOCK_DISPLAY;
     }
   }
+
+  // Mostra ou oculta a mensagem de nenhum resultado
+  displayNoResultsMessage(!hasResults);
+
+  // Oculta os banners se não houver resultados
+  displayBanners(hasResults);
 }
 
+function displayBanners(hasResults) {
+  const bannerSections = document.querySelectorAll(".card__banner");
+  for (const bannerSection of bannerSections) {
+    bannerSection.style.display = hasResults ? BLOCK_DISPLAY : NONE_DISPLAY;
+  }
+}
+function displayNoResultsMessage(display) {
+  const noResultsMessage = document.getElementById("noResultsMessage");
+
+  if (display) {
+    noResultsMessage.style.display = BLOCK_DISPLAY;
+  } else {
+    noResultsMessage.style.display = NONE_DISPLAY;
+  }
+}
 searchInput.addEventListener("input", searchCheat);
 
 // Filtrar cheats por secao
@@ -88,16 +109,14 @@ function filterBannerCheats(selectTerm) {
   }
 }
 
-selectSection.addEventListener("change", filterCheats);
-
-// Limpar pesquisa e filtro
-const btnSearchClear = document.getElementById("btnSearchClear");
-
 function clearSearchFilter() {
   searchInput.value = "";
   selectSection.value = "";
   searchCheat();
   filterCheats();
 }
+selectSection.addEventListener("change", filterCheats);
 
+// Limpar pesquisa e filtro
+const btnSearchClear = document.getElementById("btnSearchClear");
 btnSearchClear.addEventListener("click", clearSearchFilter);

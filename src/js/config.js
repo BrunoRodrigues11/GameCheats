@@ -95,8 +95,8 @@ const cheatsBannerConfig = [
   },
 ];
 
-cheatsCardConfig.forEach((bannerCheatsConfig) => {
-  createCheatsCard(bannerCheatsConfig.listCheats, bannerCheatsConfig.idCard);
+cheatsCardConfig.forEach((CardCheatsConfig) => {
+  createCheatsCard(CardCheatsConfig.listCheats, CardCheatsConfig.idCard);
 });
 
 cheatsBannerConfig.forEach((bannerCheatsConfig) => {
