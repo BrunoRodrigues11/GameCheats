@@ -88,7 +88,7 @@ const cheatsBannerConfig = [
     imgSrc: "../assets/img/gta5.jpg",
   },
   {
-    listCheats: worldCheatsCOMP,
+    listCheats: vehicleCheatsCOMP,
     idCardBanner: "card_vehicle_banner_comp",
     title: "Vehicle Cheats",
     imgSrc: "../assets/img/gta5.jpg",
