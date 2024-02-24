@@ -1,20 +1,39 @@
-import {
-  playerCheatsPS,
-  worldCheatsPS,
-  vehicleCheatsPS,
-  playerCheatsXBX,
-  worldCheatsXBX,
-  vehicleCheatsXBX,
-  playerCheatsCOMP,
-  worldCheatsCOMP,
-  vehicleCheatsCOMP,
-} from "../api_cheats/dados_gta5.js";
-
 const DIV_ELEMENT = "div";
 const IMG_ELEMENT = "img";
 
+// Criar cards de banner
+export function createBannerCard(list_cheats, idCardBanner, titulo, img) {
+  let card_container_banner = document.getElementById(idCardBanner);
+
+  // Criar elemento de card content
+  let card_content_banner = document.createElement(DIV_ELEMENT);
+  card_content_banner.className = "card mt-3 card__banner";
+  card_content_banner.dataset.secao = list_cheats[0].secao;
+  card_container_banner.appendChild(card_content_banner);
+
+  // Criar elemento card body
+  let card_body_banner = document.createElement(DIV_ELEMENT);
+  card_body_banner.classList.add("card-body");
+  card_content_banner.appendChild(card_body_banner);
+
+  // Adicionar titulo
+  let titulo_container = document.createElement("span");
+  titulo_container.className = "text-light card__section";
+  card_body_banner.appendChild(titulo_container);
+
+  let titulo_banner = document.createElement("h5");
+  titulo_banner.textContent = titulo;
+  titulo_container.appendChild(titulo_banner);
+
+  // Adicionar imagem
+  let img_banner = document.createElement("img");
+  img_banner.src = img;
+  img_banner.alt = `Banner do jogo com o texto ${titulo}`;
+  card_body_banner.appendChild(img_banner);
+}
+
 // Criar cards de cheats
-function createCheatsCard(list_cheats, idCard) {
+export function createCheatsCard(list_cheats, idCard) {
   let card = document.getElementById(idCard);
 
   // Iterar sobre o array de objetos
@@ -82,20 +101,8 @@ function createCheatsCard(list_cheats, idCard) {
   });
 }
 
-createCheatsCard(playerCheatsPS, "card_player_PS");
-createCheatsCard(worldCheatsPS, "card_world_PS");
-createCheatsCard(vehicleCheatsPS, "card_vehicle_PS");
-
-createCheatsCard(playerCheatsXBX, "card_player_XBX");
-createCheatsCard(worldCheatsXBX, "card_world_XBX");
-createCheatsCard(vehicleCheatsXBX, "card_vehicle_XBX");
-
-createCheatsCard(playerCheatsCOMP, "card_player_COMP");
-createCheatsCard(worldCheatsCOMP, "card_world_COMP");
-createCheatsCard(vehicleCheatsCOMP, "card_vehicle_COMP");
-
 // Criar modal de veiculos
-function createModalVehicles(idCard) {
+export function createModalVehicles(idCard) {
   // Modal de veiculos
   let cards__section = document.getElementById(idCard);
   let modal__image = document.getElementById("modal__image");
@@ -115,13 +122,9 @@ function createModalVehicles(idCard) {
 }
 
 // Mostrar o modal
-function showModal(ilustracao, veiculo) {
+export function showModal(ilustracao, veiculo) {
   modal__image.src = ilustracao;
   modal__image.alt = veiculo;
   modal__title.textContent = veiculo;
   $("#modal").modal("show");
 }
-
-createModalVehicles("card_vehicle_PS");
-createModalVehicles("card_vehicle_XBX");
-createModalVehicles("card_vehicle_COMP");
