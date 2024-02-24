@@ -97,7 +97,6 @@ const cheatsBannerConfig = [
 
 cheatsCardConfig.forEach((bannerCheatsConfig) => {
   createCheatsCard(bannerCheatsConfig.listCheats, bannerCheatsConfig.idCard);
-  console.log("Funcionou o config cheats banner");
 });
 
 cheatsBannerConfig.forEach((bannerCheatsConfig) => {
@@ -107,7 +106,6 @@ cheatsBannerConfig.forEach((bannerCheatsConfig) => {
     bannerCheatsConfig.title,
     bannerCheatsConfig.imgSrc
   );
-  console.log("Funcionou o config cheats banner");
 });
 
 createModalVehicles("card_vehicle_ps");

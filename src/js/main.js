@@ -35,14 +35,26 @@ const selectSection = document.getElementById("selectSection");
 function searchCheat() {
   const searchTerm = searchInput.value.toLowerCase();
   const cheatsCard = Array.from(document.getElementsByClassName("card__cheat"));
+  const cheatBanner = Array.from(
+    document.getElementsByClassName("card__banner")
+  );
+
   for (const cheat of cheatsCard) {
     const cheatTitle = cheat.querySelector("h5").textContent.toLowerCase();
     const cheatSection = cheat.dataset.secao.toLowerCase();
+
     if (cheatTitle.includes(searchTerm)) {
       cheat.style.display = BLOCK_DISPLAY;
       filterBannerCheats(cheatSection);
     } else {
       cheat.style.display = NONE_DISPLAY;
+    }
+  }
+
+  // Verificar se o searchTerm está vazio e exibir todos os banners nesse caso
+  if (searchTerm === "") {
+    for (const banner of cheatBanner) {
+      banner.style.display = BLOCK_DISPLAY;
     }
   }
 }
@@ -55,9 +67,11 @@ function filterCheats() {
   const cheatsCard = Array.from(document.getElementsByClassName("card__cheat"));
   for (const cheat of cheatsCard) {
     const cheatSection = cheat.dataset.secao.toLowerCase();
-    cheat.style.display = cheatSection.includes(selectTerm)
-      ? BLOCK_DISPLAY
-      : NONE_DISPLAY;
+    if (cheatSection.includes(selectTerm)) {
+      cheat.style.display = BLOCK_DISPLAY;
+    } else {
+      cheat.style.display = NONE_DISPLAY;
+    }
   }
   filterBannerCheats(selectTerm);
 }
